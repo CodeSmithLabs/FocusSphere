@@ -80,7 +80,7 @@ export const GoalSettingModal = ({ isOpen, onClose, userProfile }: GoalSettingMo
         <div className="space-y-2">
           {goals.map((goal, index) => (
             <div key={index} className="flex items-center">
-              <div className="flex-1 text-lockedin-purple">{goal}</div>
+              <div className="flex-1 text-focussphere-purple">{goal}</div>
               <button onClick={() => handleRemoveGoal(index)} className="text-red-500">
                 <TrashIcon size={16} />
               </button>
@@ -99,7 +99,7 @@ export const GoalSettingModal = ({ isOpen, onClose, userProfile }: GoalSettingMo
             />
             <button
               onClick={handleAddGoal}
-              className="bg-lockedin-purple text-white px-3 rounded-r hover:bg-lockedin-purple-dark"
+              className="bg-focussphere-purple text-white px-3 rounded-r hover:bg-focussphere-purple-dark"
               disabled={!currentGoal.trim()}
             >
               Add
@@ -110,7 +110,7 @@ export const GoalSettingModal = ({ isOpen, onClose, userProfile }: GoalSettingMo
         <button
           onClick={handleFinalizeGoals}
           className={`mt-4 w-full p-2 rounded ${
-            goals.length === 3 ? 'bg-lockedin-purple text-white' : 'bg-gray-200 text-gray-500'
+            goals.length === 3 ? 'bg-focussphere-purple text-white' : 'bg-gray-200 text-gray-500'
           }`}
           disabled={goals.length !== 3 || isGenerating}
         >

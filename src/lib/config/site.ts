@@ -1,6 +1,6 @@
 const siteConfig = {
-  name: 'Lockedin Pro',
-  alt_name: 'Lockedin Pro',
+  name: 'focussphere Pro',
+  alt_name: 'focussphere Pro',
   description: 'A modern productivity application to help you stay organized',
   url: process.env.NEXT_PUBLIC_DOMAIN,
   ogImage: '',

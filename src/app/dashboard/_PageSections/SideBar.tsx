@@ -7,7 +7,7 @@ export default function SideBar() {
   return (
     <div className="h-full flex flex-col">
       <div className="p-4 border-b border-border">
-        <img src="/logo.png" alt="LockedIn" className="w-32" />
+        <img src="/logo.png" alt="focussphere" className="w-32" />
       </div>
       <nav className="mt-4 flex flex-col gap-2">
         <Link

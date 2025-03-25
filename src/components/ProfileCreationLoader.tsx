@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { Icons } from './Icons';
 
 const messages = [
-  { text: 'Activating your personal LockedIn profile...', emoji: '🚀' },
+  { text: 'Activating your personal focussphere profile...', emoji: '🚀' },
   { text: 'Crafting your unique experience...', emoji: '🎨' },
   { text: 'Securing your data with top-notch encryption...', emoji: '🔒' },
   { text: 'Almost there! Just a few more seconds...', emoji: '⏳' }
@@ -48,7 +48,7 @@ export function ProfileCreationLoader() {
         transition={{ duration: 0.3 }}
       >
         <motion.div
-          className="w-16 h-16 bg-lockedin-blue rounded-full mx-auto mb-4 flex items-center justify-center"
+          className="w-16 h-16 bg-focussphere-blue rounded-full mx-auto mb-4 flex items-center justify-center"
           animate={{
             scale: [1, 1.2, 1],
             rotate: [0, 180, 360]
@@ -71,20 +71,20 @@ export function ProfileCreationLoader() {
             transition={{ duration: 0.5 }}
             className="mb-4"
           >
-            <h2 className="text-xl font-semibold text-lockedin-purple-dark">
+            <h2 className="text-xl font-semibold text-focussphere-purple-dark">
               {messages[currentMessageIndex].text} {messages[currentMessageIndex].emoji}
             </h2>
           </motion.div>
         </AnimatePresence>
 
         <motion.div
-          className="w-full bg-lockedin-purple-darker rounded-full h-2 mb-4"
+          className="w-full bg-focussphere-purple-darker rounded-full h-2 mb-4"
           initial={{ width: 0 }}
           animate={{ width: '100%' }}
           transition={{ duration: 5, repeat: Infinity, repeatType: 'reverse' }}
         >
           <motion.div
-            className="bg-lockedin-purple-light h-2 rounded-full"
+            className="bg-focussphere-purple-light h-2 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: '100%' }}
             transition={{ duration: 5, repeat: Infinity, repeatType: 'reverse' }}
@@ -99,7 +99,7 @@ export function ProfileCreationLoader() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-lockedin-purple-darkest italic">{quotes[currentQuoteIndex]}</p>
+            <p className="text-focussphere-purple-darkest italic">{quotes[currentQuoteIndex]}</p>
           </motion.div>
         </AnimatePresence>
       </motion.div>
