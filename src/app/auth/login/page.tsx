@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Link from 'next/link';
 import { useUserProfile } from '@/context/UserProfileContext';
+import siteConfig from '@/lib/config/site';
 
 import { authFormSchema, authFormValues } from '@/lib/types/validations';
 import config from '@/lib/config/auth';
@@ -27,7 +28,8 @@ import { ProfileCreationLoader } from '@/components/ProfileCreationLoader';
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
-  const [isCreatingProfile, setIsCreatingProfile] = useState(false); // State to control the loader
+  const [isCreatingProfile, setIsCreatingProfile] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const router = useRouter();
   const { refreshUserProfile } = useUserProfile();
 
@@ -42,6 +44,7 @@ export default function LoginPage() {
   const isSubmitting = formState.isSubmitting;
 
   const onSubmit = async (values: authFormValues) => {
+    setErrorMessage(null);
     try {
       const response = await fetch('/api/auth/signin', {
         method: 'POST',
@@ -76,12 +79,13 @@ export default function LoginPage() {
           router.push(config.redirects.toDashboard);
         } else {
           setIsCreatingProfile(false);
-          console.error('Profile creation failed');
+          setErrorMessage('Profile creation failed. Please tryy again later')
         }
       }
     } catch (error: any) {
       setIsCreatingProfile(false);
-      console.error('Login error:', error);
+      console.error('Login error;',error)
+      setErrorMessage('An error occured. Please try again later')
     }
   };
 
@@ -89,7 +93,8 @@ export default function LoginPage() {
     <div className="flex justify-center items-center min-h-screen">
       <Card className="bg-background-light dark:bg-background-dark">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl">Login to LockedIn</CardTitle>
+          <CardTitle className="text-2xl">Login to {siteConfig.name}
+          </CardTitle>
           <CardDescription>Enter your email and password below</CardDescription>
         </CardHeader>
         <CardContent>
@@ -152,6 +157,8 @@ export default function LoginPage() {
                 <Icons.Lock className="mr-2 h-4 w-4" />
                 Sign In
               </Button>
+
+              {errorMessage && <p className='text-red text-center'>errorMessage</p>}
             </form>
           </Form>
         </CardContent>
@@ -161,7 +168,7 @@ export default function LoginPage() {
               Don&apos;t have an account?{' '}
               <Link
                 href="/auth/signup"
-                className="leading-7 text-lockedin-blue hover:text-lockedin-blue-dark"
+                className="leading-7 text-focussphere-blue hover:text-focussphere-blue-dark"
               >
                 Sign up here.
               </Link>

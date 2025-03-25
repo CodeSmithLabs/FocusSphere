@@ -1,5 +1,5 @@
 const siteConfig = {
-  name: 'focussphere Pro',
+  name: 'FocusSphere',
   alt_name: 'focussphere Pro',
   description: 'A modern productivity application to help you stay organized',
   url: process.env.NEXT_PUBLIC_DOMAIN,
@@ -7,7 +7,7 @@ const siteConfig = {
   loading_bar_color: '#ADD8E6',
   links: {
     twitter: 'https://twitter.com',
-    github: 'https://github.com/lockdin',
+    github: 'https://github.com/codesmithlabs/focussphere',
     linkedin: 'https://linkedin.com'
   }
 };
