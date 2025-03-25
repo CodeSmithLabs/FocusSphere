@@ -26,6 +26,8 @@ export async function SupabaseSignIn(email: string, password: string): Promise<A
       clearSessionCookies();
     }
 
+    storeSessionCookies(data.session, profile || null)
+
     return { error: null, data: { user: data.user, session: data.session, profile } };
   }
 
