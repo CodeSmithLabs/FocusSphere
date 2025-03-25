@@ -44,7 +44,6 @@ export const UserProfileProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
       setUserProfile(userProfileData);
       localStorage.setItem('userProfile', JSON.stringify(userProfileData));
-      console.log('User profile set:', userProfileData);
     } catch (error) {
       console.error('Error fetching user profile:', error);
       clearUserProfile();
