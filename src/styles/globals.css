@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 270 100% 25%; /* Deep Purple */
+    --foreground: 0 0% 100%; /* White */
+    --card: 270 100% 25%; /* Deep Purple */
+    --card-foreground: 0 0% 100%; /* White */
+    --popover: 270 100% 25%; /* Deep Purple */
+    --popover-foreground: 0 0% 100%; /* White */
+    --primary: 270 100% 50%; /* Lighter Purple */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 270 100% 75%; /* Lightest Purple */
+    --secondary-foreground: 270 100% 25%; /* Deep Purple */
+    --muted: 0 0% 75%; /* Gray */
+    --muted-foreground: 270 100% 50%; /* Lighter Purple */
+    --accent: 270 100% 75%; /* Lightest Purple */
+    --accent-foreground: 270 100% 25%; /* Deep Purple */
+    --destructive: 0 84.2% 60.2%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --border: 0 0% 75%; /* Gray */
+    --input: 0 0% 75%; /* Gray */
+    --ring: 270 100% 50%; /* Lighter Purple */
+    --radius: 0.3rem;
+  }
+
+  .dark {
+    --background: 270 100% 25%; /* Deep Purple */
+    --foreground: 0 0% 100%; /* White */
+    --card: 270 100% 25%; /* Deep Purple */
+    --card-foreground: 0 0% 100%; /* White */
+    --popover: 270 100% 25%; /* Deep Purple */
+    --popover-foreground: 0 0% 100%; /* White */
+    --primary: 270 100% 50%; /* Lighter Purple */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 270 100% 75%; /* Lightest Purple */
+    --secondary-foreground: 270 100% 25%; /* Deep Purple */
+    --muted: 0 0% 50%; /* Darker Gray */
+    --muted-foreground: 270 100% 50%; /* Lighter Purple */
+    --accent: 270 100% 75%; /* Lightest Purple */
+    --accent-foreground: 270 100% 25%; /* Deep Purple */
+    --destructive: 0 62.8% 30.6%; /* Darker Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --border: 0 0% 50%; /* Darker Gray */
+    --input: 0 0% 50%; /* Darker Gray */
+    --ring: 270 100% 50%; /* Lighter Purple */
+  }
+}
